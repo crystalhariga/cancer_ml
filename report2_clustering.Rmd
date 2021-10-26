@@ -1,0 +1,59 @@
+---
+title: 'Report2: Clustering'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Hierarchical Clustering
+
+```{r}
+setwd("C:/Users/ca2ha/Documents/BUS 212A/final_project")
+df <- read.csv("cancer_reg_minimized.csv")
+
+df.norm <- cbind(sapply(df, scale))
+head(df.norm)
+
+d.euclidean <- dist(df.norm, method = "euclidean") ## this is the best
+d.manhattan <- dist(df.norm, method = "manhattan")
+d.minkowski <- dist(df.norm, method = "minkowski")
+
+# Euclidean method
+hc.e1 <- hclust(d.euclidean, method = "ward.D")
+plot(hc.e1, hang = -1, ann = FALSE)  ###### good one -- equal
+
+
+# Manhattan method -- much clearer
+hc.man1 <- hclust(d.manhattan, method = "ward.D")
+plot(hc.man1, hang = -1, ann = FALSE) ## clearer
+
+
+# Minkowski Method -- pretty clear
+hc.min1 <- hclust(d.minkowski, method = "ward.D")
+plot(hc.min1, hang = -1, ann = FALSE) ## pretty clear
+
+## Overall the best it seems that the equal cluster is 3
+
+# use cat() at cutree object
+memb1 <- cutree(hc.e1, k = 3)
+memb1
+cat(memb1)
+hist(memb1)
+
+```
+
+# KMeans Clustering
+```{r}
+set.seed(2)
+km <- kmeans(df.norm, 5)   # Chose 5 based on histogram since it's the most equally distributed
+
+# show cluster membership
+km$cluster
+hist(km$cluster) ## not as equally distributed compared to Hierarchical clustering
+
+cat(km$cluster)
+```
