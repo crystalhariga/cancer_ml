@@ -4,5 +4,14 @@ This is a project for a course to learn about various ML models and their applic
 
 
 ## View html files here
+### Unsupervised Learning
 * [Clustering](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/report2_clustering.html)
-* [Classification](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/report2_classification.html)
+
+### Supervised Learning
+* [Classification: KNN & Logistic Regression](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/report2_classification.html)
+#### Trees & Ensemble Models
+* [Classification Tree](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/Report3_ClassificationTree.html)
+* [Regression Tree](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/Report3_RegressionTree.html)
+* [Random Forest](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/Report3_RandomForests.html)
+* [Boosted Trees](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/Report3_BoostedTrees.html)
+* [Bagged Trees](https://htmlpreview.github.io/?https://github.com/crystalhariga/cancer_ml/blob/main/Report3_BaggedTrees.html)
