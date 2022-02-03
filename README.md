@@ -1,7 +1,7 @@
 # Machine Learning Models: Cancer Cases and Treatment Costs
 * Performed data preparation (transformed variables, clustering) and EDA (descriptive statistics, simple visualization) to understand more about the dataset
 * Built Prediction (Regression Tree, Linear Regression) and Classification (KNN, Logistic Regression, Boosted Tree, Bagged Tree) models to predict annual cancer cases
-* Evaluated models above using RMSE, accuracy, confusion matrix, F1 scores to determine best prediction and best classification mode
+* Evaluated models above using RMSE, accuracy, confusion matrix, F1 scores to determine best prediction and best classification model
 * Compared best hand-crafted models with DataRobot's -- resulting in:
     * __Best Classification Model__: Hand-crafted Bagging Tree with 0.93 Accuracy score (_successfully beat DataRobot!_)
     * __Best Prediction Model__: DataRobot's Random Forest Regressor with RMSE of 418.02
